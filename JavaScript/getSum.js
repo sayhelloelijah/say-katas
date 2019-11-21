@@ -1,33 +1,34 @@
-document.addEventListener('DOMContentLoaded', () => {
-	function getSum(a,b) {
-		//Good luck!
-		let start = Math.min(a, b);
-		let end = Math.max(a, b);
-		let total = 0;
-		if (start === end) end;
+// Exercise on CodeWars
+// Completed 11/21/19
+function getSum(a, b) {
+	"use strict";
+	// Good luck!
+	let start = Math.min(a, b); // get lowest number between the given arguments
+	let end = Math.max(a, b); // get highest number between the given arguments
+	if (start === end) end; // if the numbers are the same return the number
 
-		console.log(getNumbers(start, end));
+	let nums = getNumbers(start, end);
 
-		//	for (let j = 0; j < nums.length; j++) {
-		//		total = total + nums[j];
-		//	}
+	/* Use Arithmetic progression formula to get answer 
+      n(a1 + aN)/2
+      n = length of array; a1 = first number in array; aN = last number in array;
+    */
+	let total = (nums.length * (nums[0] + nums[nums.length - 1])) / 2;
 
-		return total;
+	return total;
+}
+
+// get array of numbers between lowest number and highest number
+function getNumbers(start, end) {
+	let s = start;
+	let e = end;
+	let nums = [];
+
+	for (let i = s; i <= e; i++) {
+		nums.push(i);
 	}
 
-	function getNumbers(start, end) {
-		let s = start;
-		let e = end;
-		let nums = [];
+	return nums;
+}
 
-		for (let i = s; s < e; i++) {
-			nums.push(i);
-		}
-
-		console.log(nums);
-
-		return nums;
-	}
-
-	getSum(-1, 5);
-});
+getSum(-1, 5);
