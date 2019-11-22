@@ -5,7 +5,7 @@ function getSum(a, b) {
 	// Good luck!
 	let start = Math.min(a, b); // get lowest number between the given arguments
 	let end = Math.max(a, b); // get highest number between the given arguments
-	if (start === end) end; // if the numbers are the same return the number
+	if (start === end) return end; // if the numbers are the same return the number
 
 	let nums = getNumbers(start, end);
 
