@@ -17,9 +17,6 @@ function firstNonRepeatingLetter(str) {
 	let string = str.toLowerCase();
 	/* auto fail cases */
 	if(str.length == 1) return str; // check for one letter words
-	if(splitStr.every(letter => letter.charCodeAt(0) === str.charCodeAt(0))) {
-		return ""; // return nothing if all repeating characters
-	};
 
 	for (let i = 0; i < string.length; i++) {
 		if(countOccurrences(splitStr, string[i]) === 1) {
@@ -28,4 +25,4 @@ function firstNonRepeatingLetter(str) {
 	}
 	return "";
 }
-console.log(firstNonRepeatingLetter('moonmen'));
+console.log(firstNonRepeatingLetter('aaa'));

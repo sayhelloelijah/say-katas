@@ -1,3 +1,4 @@
+// jshint esversion: 6
 // Codewars: Completed 11/21
 /* DIRECTION:
 	If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9.
@@ -7,14 +8,16 @@
 
 	Note: If the number is a multiple of both 3 and 5, only count it once.√
 */
+const isMultipleOf = (multiple, value) => value % multiple === 0;
+const addAll = (arr) => arr.reduce((a, b) => a + b);
 
 function solution(number){
 	let nums = [];
 
 	for (let i = number - 1; i > 0; i--) {
-		if(i % 3 == 0 && i % 5 == 0) {
+		if(isMultipleOf(3, i) && isMultipleOf(5, i)) {
 			nums.push(i);
-		} else if (i % 3 == 0 || i % 5 == 0) {
+		} else if (isMultipleOf(3, i) || isMultipleOf(5, i)) {
 			nums.push(i);
 		}
 	}
@@ -23,5 +26,7 @@ function solution(number){
 		return 0;
 	}
 
-	return nums.reduce((prev, curr) => prev + curr);
+	return addAll(nums);
 }
+
+console.log(solution(10));

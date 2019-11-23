@@ -1,3 +1,4 @@
+// jshint esversion: 6
 // Exercise on CodeWars
 // Completed 11/21/19
 function getSum(a, b) {
@@ -5,7 +6,6 @@ function getSum(a, b) {
 	// Good luck!
 	let start = Math.min(a, b); // get lowest number between the given arguments
 	let end = Math.max(a, b); // get highest number between the given arguments
-	if (start === end) return end; // if the numbers are the same return the number
 
 	let nums = getNumbers(start, end);
 
@@ -31,4 +31,4 @@ function getNumbers(start, end) {
 	return nums;
 }
 
-getSum(-1, 5);
+console.log(getSum(-1, -1));
