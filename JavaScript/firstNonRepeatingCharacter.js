@@ -1,3 +1,4 @@
+// jshint esversion: 6
 // Codewars completed 11/22
 /* DIRECTIONS
 	Write a function named first_non_repeating_letter that takes a string input, and returns the first character that is not repeated anywhere in the string.
@@ -8,6 +9,7 @@
 
 	If a string contains all repeating characters, it should return an empty string ("") or None -- see sample tests.
 */
+const countOccurrences = (arr, val) => arr.reduce((a, v) => v === val ? a + 1 : a, 0);
 
 function firstNonRepeatingLetter(str) {
 	// Add your code here
@@ -20,13 +22,10 @@ function firstNonRepeatingLetter(str) {
 	};
 
 	for (let i = 0; i < string.length; i++) {
-		// loop through each character
-		let char = string[i];
-		/* if the character that is present is not found elsewhere in the string
-		return the character and end the loop */
-		if(string.indexOf(char) == i && string.indexOf(char, i + 1) == -1) {
+		if(countOccurrences(splitStr, string[i]) === 1) {
 			return str[i];
 		}
 	}
 	return "";
 }
+console.log(firstNonRepeatingLetter('moonmen'));
