@@ -1,4 +1,4 @@
-# say-katas
+# say-katas ![Codewars Badge](https://www.codewars.com/users/sayhelloelijah/badges/small)
 
 This repo is a collections of programming katas (exercises) from various sources.
 
