@@ -39,5 +39,5 @@ var findMissing = function (list) {
 	}
 }
 
-console.log(`The missing number is: ${findMissing([2, 5, 8, 14])}`); // should return 3
+console.log(`The missing number is: ${findMissing([2, 5, 8, 14])}`); // should return 11
 // diff = 12/4 = 3
