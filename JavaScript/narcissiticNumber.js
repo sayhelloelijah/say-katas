@@ -1,4 +1,3 @@
-// jshint esversion: 6
 // Codewars challenge completed
 /*
 A Narcissistic Number is a number which is the sum of its own digits,

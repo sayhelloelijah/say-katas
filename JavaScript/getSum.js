@@ -1,4 +1,3 @@
-// jshint esversion: 6
 // Exercise on CodeWars
 // Completed 11/21/19
 function getSum(a, b) {

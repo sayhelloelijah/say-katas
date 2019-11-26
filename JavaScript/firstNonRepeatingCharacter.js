@@ -1,4 +1,3 @@
-// jshint esversion: 6
 // Codewars completed 11/22
 /* DIRECTIONS
 	Write a function named first_non_repeating_letter that takes a string input, and returns the first character that is not repeated anywhere in the string.

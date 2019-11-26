@@ -1,5 +1,4 @@
 // Codewars completed 11/25
-// jshint esversion: 6
 /**
  * 
  * @param {String} str 	String of words
