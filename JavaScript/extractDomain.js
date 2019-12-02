@@ -14,7 +14,4 @@
 * @param {String} url		URL string ex. https://github.com/sayhelloelijah
 * @returns {String}     Value of domain name without extension ex. https://github.com/sayhelloelijah -> github
 */
-function domainName(url){
-	url = url.replace('https://', '').replace('http://', '').replace('www.', '').split('.');
-	return url[0];
-}
+let domainName = url => url.replace('https://', '').replace('http://', '').replace('www.', '').split('.')[0];
