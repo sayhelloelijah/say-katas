@@ -30,7 +30,7 @@
  */
 function isPP(n) {
 	for (let m = 1; m < n; m++) {
-		for (let k = 1; k < 10; k++) {
+		for (let k = 1; k < Math.floor(Math.sqrt(n)); k++) {
 			if(Math.pow(m, k) === n) {
 				return [m, k];
 			}
@@ -39,5 +39,6 @@ function isPP(n) {
 	return null;
 }
 
-console.log(isPP(62)); // returns null
-console.log(isPP(64)); // returns [2, 6]
+isPP(62); // returns null
+isPP(64); // returns [2, 6]
+isPP(676); // returns [26, 2]

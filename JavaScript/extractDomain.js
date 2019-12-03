@@ -15,3 +15,4 @@
 * @returns {String}     Value of domain name without extension ex. https://github.com/sayhelloelijah -> github
 */
 let domainName = url => url.replace('https://', '').replace('http://', '').replace('www.', '').split('.')[0];
+domainName('https://www.github.com'); // returns github

@@ -15,20 +15,24 @@
 	The function should return an integer, the total time required.
 */
 
-const STATUS = {ready: 'READY', busy: 'BUSY'};
-
+/**
+ * 
+ * @param {Array} customers 	array of customers times
+ * @param {Number} n 	        number of lanes open
+ * @return {Number}           amount time it takes to checkout the queue
+ */
 function queueTime(customers, n) {
 	let tills = Array(n).fill(0);
 
 	customers.forEach((customer) => {
-		let nextTill = tills.indexOf(Math.min(...tills))
+		let nextTill = tills.indexOf(Math.min(...tills));
 		tills[nextTill] += customer;
 	});
 
 	return Math.max(...tills);
 }
 
-console.log(queueTime([2, 3, 7, 1], 2));
+queueTime([2, 3, 7, 1], 2); // returns 9
 
 /* EXAMPLES 
 	queueTime([5,3,4], 1)
