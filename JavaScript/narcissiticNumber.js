@@ -30,16 +30,15 @@ only valid integers will be passed into the function.
 
 function narcissistic(value) {
     // Code me to return true or false
-    let digitCount = String(value).split('');
-    let total = 0;
-    digitCount.forEach(digit => {
-        digit = Math.pow(digit, digitCount.length);
-        digitCount = digitCount.slice(1);
-        digitCount.push(digit);
-    });
-    digitCount = digitCount.reduce((a, b) => a + b);
+  let digitCount = String(value).split('');
+	digitCount.forEach(digit => {
+			digit = Math.pow(digit, digitCount.length);
+			digitCount = digitCount.slice(1);
+			digitCount.push(digit);
+	});
+	digitCount = digitCount.reduce((a, b) => a + b);
 
-    return digitCount === value ? true : false;
+	return digitCount === value ? true : false;
 }
 
 narcissistic(125);
